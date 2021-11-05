@@ -1,1 +1,69 @@
-<p>inicio works!</p>
+<div class="container-fluid cor">
+  <div class="row">
+    <div class="col-md-6 py-5 d-flex flex-column justify-content-center">
+      <div class="row d-flex flex-column align-items-center">
+        <h1 class='thiago'>Seja bem vinde</h1>
+        <h4>Use esse blog para <span class='fonte'>digitar</span> uns textos dahora</h4>
+      </div>
+      <div class="row d-flex justify-content-center mt-3">
+        <button class="btn btn-dark mr-3" data-toggle="modal" data-target="#exampleModal">Criar Postagem</button>
+        <button class="btn btn-outline-dark">Ver postagens</button>
+      </div>
+    </div>
+
+    <div class="col-md-6 d-flex justify-content-center">
+      <img src="https://i.imgur.com/fyfri1v.png" alt="" width="500">
+    </div>
+  </div>
+</div>
+
+<div class="container ">
+  <ul class="nav nav-tabs d-flex justify-content-center" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Todas as postagens</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link " id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Minhas postagens</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Postagens por tema</a>
+    </li>
+  </ul>
+  
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">Aqui aparecem as minhas postagens</div>
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">aqui são as minhas postagens</div>
+    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">aqui são todas as postagens</div>
+  </div>
+</div>
+
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Crie sua postagem</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <input type="text" placeholder="titulo" class="form-control mb-2">
+        <textarea name="" id="" placeholder="Texto" cols="30" rows="3" class="form-control"></textarea>
+        <p>Escolha um tema</p>
+        <select name="" id="" class="form-control">
+          <option value="">Tema legal</option>
+        </select>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary">Publicar</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioComponent implements OnInit {
 
+  range: number
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
+
 
 }

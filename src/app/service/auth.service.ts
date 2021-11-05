@@ -1,9 +1,9 @@
+import { environment } from 'src/environments/environment.prod';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { CredenciaisDTO } from '../model/CredenciaisDTO';
 import { Usuario } from '../model/Usuario';
-import { UsuarioLoginDTO } from '../model/UsuarioLoginDTO';
 
 @Injectable({
   providedIn: 'root'
@@ -16,11 +16,17 @@ export class AuthService {
     return this.http.put<CredenciaisDTO>('https://backend34.herokuapp.com/api/v1/usuario/credenciais', credenciais)
   }
 
-  entrarDTO(usuarioLoginDTO: UsuarioLoginDTO): Observable<UsuarioLoginDTO> {
-    return this.http.put<UsuarioLoginDTO>('https://backend34.herokuapp.com/api/v1/usuario/credenciais', usuarioLoginDTO)
+  cadastrar(usuario: Usuario): Observable<Usuario> {
+    // return this.http.post<Usuario>('https://backend34.herokuapp.com/api/v1/usuario/salvar', usuario)
+    return this.http.post<Usuario>('https://projetinhoblogpessoal.herokuapp.com/usuarios/cadastrar', usuario)
   }
 
-  cadastrar(usuario: Usuario): Observable<Usuario> {
-    return this.http.post<Usuario>('https://backend34.herokuapp.com/api/v1/usuario/salvar', usuario)
+  logado(){
+    let ok: boolean = false;
+
+    if (environment.token != ''){
+      ok = true
+    }
+    return ok
   }
 }
