@@ -14,6 +14,8 @@ export class CadastrarComponent implements OnInit {
   confirmarSenha: string;
   tipoUsuario: string;
 
+  
+
   constructor(
     private authService: AuthService,
     private router: Router
@@ -34,6 +36,7 @@ export class CadastrarComponent implements OnInit {
 
   cadastrar(){
     this.usuario.tipo = this.tipoUsuario;
+
 
     if(this.usuario.senha != this.confirmarSenha){
       alert('As senhas estão incorretas.')
