@@ -1,3 +1,5 @@
+import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
+import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
 import { EditTemaComponent } from './edit/edit-tema/edit-tema.component';
 import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
 import { TemaComponent } from './tema/tema.component';
@@ -15,6 +17,8 @@ const routes: Routes = [
   {path: 'temas', component: TemaComponent},
   {path: 'temadelete/:id', component: TemaDeleteComponent},
   {path: 'temaedit/:id', component: EditTemaComponent},
+  {path: 'postagemdelete/:id', component: PostagemDeleteComponent},
+  {path: 'postagemedit/:id', component: PostagemEditComponent},
 ];
 
 @NgModule({

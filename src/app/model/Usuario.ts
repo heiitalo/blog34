@@ -1,3 +1,5 @@
+import { Postagem } from "./Postagem";
+
 export class Usuario {
   public email: string;
   public foto: string;
@@ -5,4 +7,5 @@ export class Usuario {
   public nome: string;
   public senha: string;
   public tipo: string;
+  public minhasPostagens: Postagem[]
 }
